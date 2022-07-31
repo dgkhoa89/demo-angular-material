@@ -6,6 +6,9 @@ command ->      ng add @angular/material
         + roboto font
 - test Material by adding a button
 
+# create module which contains material modules
+
+
 
 
 
