@@ -14,6 +14,8 @@ provide two components
     - mat-progress-spinner
     - mat-spinner
 
+# Toolbar component
+toolbar component is needed to create a navbar
 
 
 

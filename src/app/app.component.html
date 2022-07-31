@@ -1,14 +1,11 @@
-<!-- to show progress -->
-<div>
-    <mat-progress-spinner value="90"></mat-progress-spinner>
-</div>
-
-<!-- to show when UI loading  -->
-<button (click)="loadData()">Load Data</button>
-<div *ngIf="showSpinner">
-    <mat-spinner color="accent"></mat-spinner>
-    <span>loading data ...</span>
-</div>
-<div *ngIf="!showSpinner">
-    <span>Loaded</span>
-</div>
+<mat-toolbar color="primary" class="navbar">
+    <div>
+        <mat-icon style="padding-right:20px;">home</mat-icon>
+        <span>CodeEvolution</span>
+    </div>
+    <div >
+        <span>Home</span>
+        <span>About</span>
+        <span>Services</span>
+    </div>
+</mat-toolbar>
