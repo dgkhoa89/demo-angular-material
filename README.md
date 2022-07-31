@@ -1,3 +1,24 @@
+# add angular material
+command ->      ng add @angular/material    
+- see different in source control version
+    - index.html:
+        + icon
+        + roboto font
+- test Material by adding a button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # DemoAngularMaterial
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
