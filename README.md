@@ -9,6 +9,12 @@ command ->      ng add @angular/material
 # create module which contains material modules
 Badge can bind class value
 
+# mat progress spinner
+provide two components
+    - mat-progress-spinner
+    - mat-spinner
+
+
 
 
 

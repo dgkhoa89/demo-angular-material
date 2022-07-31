@@ -1,46 +1,14 @@
-<!-- default -->
-<div style="margin:20px">
-    <span matBadge="5">Default badge</span>
+<!-- to show progress -->
+<div>
+    <mat-progress-spinner value="90"></mat-progress-spinner>
 </div>
 
-<!-- possition -->
-<div style="margin:20px">
-    <span matBadge="5" matBadgePosition="below before">below before</span>
+<!-- to show when UI loading  -->
+<button (click)="loadData()">Load Data</button>
+<div *ngIf="showSpinner">
+    <mat-spinner color="accent"></mat-spinner>
+    <span>loading data ...</span>
 </div>
-<div style="margin:20px">
-    <span matBadge="5" matBadgePosition="below after">below after</span>
-</div>
-<div style="margin:20px">
-    <span matBadge="5" matBadgePosition="above before">above before</span>
-</div>
-<div style="margin:20px">
-    <span matBadge="5" matBadgePosition="above after">above after</span>
-</div>
-
-<!-- size and color -->
-<div style="margin:20px">
-    <span matBadge="5" matBadgeSize="small" matBadgeColor="accent">Default badge</span>
-</div>
-<div style="margin:20px">
-    <span matBadge="5" matBadgeSize="medium" matBadgeColor="primary">Default badge</span>
-</div>
-<div style="margin:20px">
-    <span matBadge="5" matBadgeSize="large" matBadgeColor="warn">Default badge</span>
-</div>
-
-<!-- overlapping -->
-<div style="margin:20px">
-    <span matBadge="5" matBadgeSize="large" matBadgeColor="warn" matBadgeOverlap="false">Default badge</span>
-</div>
-
-<!-- binding -->
-<div style="margin:20px">
-    <span matBadge={{numberOfItems}} matBadgeSize="large" matBadgeColor="warn" matBadgeOverlap="false"
-    >Default badge</span>
-</div>
-<!-- or-->
-<div style="margin:20px">
-    <span [matBadge]="numberOfItems" [matBadgeHidden]="numberOfItems===3"
-    matBadgeSize="large" matBadgeColor="warn" matBadgeOverlap="false"
-    >Default badge</span>
+<div *ngIf="!showSpinner">
+    <span>Loaded</span>
 </div>
