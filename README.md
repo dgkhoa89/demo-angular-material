@@ -7,7 +7,7 @@ command ->      ng add @angular/material
 - test Material by adding a button
 
 # create module which contains material modules
-
+Badge can bind class value
 
 
 
