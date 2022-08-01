@@ -41,6 +41,18 @@ toolbar component is needed to create a navbar
 MatListModule
 MatDividerModule --> divide list 
 
+# Grid List
+- Need to define number of columns
+- colspan | rowspan
+- height of each row in the grid
+    rowHeight=50px
+    rowHeight=2:1
+    rowHeight="fit" style="height:100px" --> fit inside the container
+- gutterSize
+    
+    
+    
+
 
 
 
