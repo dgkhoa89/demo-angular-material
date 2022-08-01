@@ -53,7 +53,9 @@ MatDividerModule --> divide list
 # Expansion panel
 - simple expansion panel
 - accordion
-    
+
+# Stepper
+linear : meaning need to complete 2 before go to 3
     
 
 

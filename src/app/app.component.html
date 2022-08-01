@@ -1,18 +1,15 @@
-<mat-tab-group #myTab (selectedTabChange)="logChange(myTab.selectedIndex)">
-    <mat-tab label="Angular">
-        <h2>
-            Angular
-        </h2>
-        <p>Angular elements are Angular components packaged as custom elements 
-            (also called Web Components), a web
-            standard for defining new HTML elements in a framework-agnostic way</p>
-    </mat-tab>
-    <mat-tab label="React">
-        <h2>React</h2>
-        <p>Current version of React.JS is V18.0.0 (April 2022).
-            Initial Release to the Public (V0.3.0) was in July 2013.
-            React.JS was first used in 2011 for Facebook's Newsfeed feature.</p>
-    </mat-tab>
-    <mat-tab label="Vue">Vue</mat-tab>
-</mat-tab-group>
-{{myTab.selectedIndex}}
+<mat-vertical-stepper linear>
+    <mat-step label="Shipping address">
+        <p>Fill the address</p>
+    </mat-step>
+    <mat-step label="Payment">
+        <p>Choose payment</p>
+         <div>
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext>Next</button>
+         </div>
+    </mat-step>
+    <mat-step label="Place order">
+        <p>confirm your order</p>
+    </mat-step>
+</mat-vertical-stepper>
