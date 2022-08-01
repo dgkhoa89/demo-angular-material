@@ -49,7 +49,10 @@ MatDividerModule --> divide list
     rowHeight=2:1
     rowHeight="fit" style="height:100px" --> fit inside the container
 - gutterSize
-    
+
+# Expansion panel
+- simple expansion panel
+- accordion
     
     
 
