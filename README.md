@@ -17,6 +17,16 @@ provide two components
 # Toolbar component
 toolbar component is needed to create a navbar
 
+# Side nav
+- always hidden by default
+- two ways binding
+    [(opened)]="navIsOpen"
+- mode
+    over--> default mode
+    push
+- Listen to open/close events of sidenav
+    
+
 
 
 
