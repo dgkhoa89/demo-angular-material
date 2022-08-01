@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  log(msg:String){
-    console.log(msg)
+  logChange(index:number | null){
+    console.log(index);
   }
 }
