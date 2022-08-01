@@ -37,6 +37,10 @@ toolbar component is needed to create a navbar
 
 - integrate with ng-template
 
+# Layout element - List
+MatListModule
+MatDividerModule --> divide list 
+
 
 
 

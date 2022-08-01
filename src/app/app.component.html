@@ -1,25 +1,28 @@
-<mat-menu #appMenu>
-    <button mat-menu-item [matMenuTriggerFor]="subMenu">Frontend</button>
-    <button mat-menu-item>Backend</button>
-    <button mat-menu-item>FullStack</button>
-</mat-menu>
+<!-- basic list -->
+<mat-list dense>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-list-item>Item 3</mat-list-item>
+</mat-list>
 
-<button mat-raised-button [matMenuTriggerFor]="appMenu" color="warn">Menu</button>
+<!-- navigation list -->
+<mat-nav-list>
+    <a mat-list-item href="#"> Home</a>
+    <a mat-list-item href="#"> Service</a>
+    <a mat-list-item href="#"> About</a>
+</mat-nav-list>
 
-<mat-menu #subMenu>
-    <button mat-menu-item>Angular</button>
-    <button mat-menu-item>React</button>
-    <button mat-menu-item>Vue</button>
-</mat-menu>
-
-<!-- Create a button logout that contains name of user -->
-<mat-menu #lazymenu>
-    <ng-template matMenuContent let-name="name" let-hobby="hobby">
-        <button mat-menu-item>Setting</button>
-        <button mat-menu-item>hobby {{hobby}}</button>
-        <button mat-menu-item>Logout {{name}}</button>
-    </ng-template>
-</mat-menu>
-
-<button mat-raised-button [matMenuTriggerFor]="lazymenu" [matMenuTriggerData]="{name:'User 1', hobby:'drinking'}">User 1</button>
-<button mat-raised-button [matMenuTriggerFor]="lazymenu" [matMenuTriggerData]="{name:'User 2', hobby: 'smoking'}">User 2</button>
+<!-- complex list  -->
+<mat-list>
+    <mat-list-item>
+        <mat-icon matListIcon>home</mat-icon>
+        <h3 matLine>Heading</h3>
+        <span matLine>Content</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>Heading 2</h3>
+        <span matLine>Content 2</span>
+    </mat-list-item>
+</mat-list>
