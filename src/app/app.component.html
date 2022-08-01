@@ -1,12 +1,25 @@
-<mat-sidenav-container>
-   <mat-sidenav #sideNav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="navIsOpen">Side nav</mat-sidenav>
-    <mat-sidenav-content>Main Content
-        <!-- 1st way to show / hide side nave -->
-        <button mat-raised-button color="primary" (click)="navIsOpen=!navIsOpen">Toggle Open</button>
-        <!-- 2nd way to show / hide side nave -->
-        <button mat-raised-button (click)="sideNav.open()">Open</button>
-        <button mat-raised-button (click)="sideNav.close()">Close</button>
-        <!-- 3st way to show / hide side nave -->
-        <button mat-raised-button color="warn" (click)="sideNav.toggle()" >Toggle</button>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-menu #appMenu>
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">Frontend</button>
+    <button mat-menu-item>Backend</button>
+    <button mat-menu-item>FullStack</button>
+</mat-menu>
+
+<button mat-raised-button [matMenuTriggerFor]="appMenu" color="warn">Menu</button>
+
+<mat-menu #subMenu>
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+</mat-menu>
+
+<!-- Create a button logout that contains name of user -->
+<mat-menu #lazymenu>
+    <ng-template matMenuContent let-name="name" let-hobby="hobby">
+        <button mat-menu-item>Setting</button>
+        <button mat-menu-item>hobby {{hobby}}</button>
+        <button mat-menu-item>Logout {{name}}</button>
+    </ng-template>
+</mat-menu>
+
+<button mat-raised-button [matMenuTriggerFor]="lazymenu" [matMenuTriggerData]="{name:'User 1', hobby:'drinking'}">User 1</button>
+<button mat-raised-button [matMenuTriggerFor]="lazymenu" [matMenuTriggerData]="{name:'User 2', hobby: 'smoking'}">User 2</button>

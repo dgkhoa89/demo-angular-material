@@ -26,6 +26,16 @@ toolbar component is needed to create a navbar
     push
 - Listen to open/close events of sidenav
     
+# Menus
+- is list of choices of temporary s
+- matmenumodule
+- Need to be trigger or programaticly 
+    [matMenuTriggerFor]="subMenu"
+- reference variable:
+    #appMenu, #subMenu
+- Possition
+
+- integrate with ng-template
 
 
 
