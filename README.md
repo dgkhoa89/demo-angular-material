@@ -57,7 +57,13 @@ MatDividerModule --> divide list
 # Stepper
 linear : meaning need to complete 2 before go to 3
     
-
+# Input 
+- module  
+    input 
+    formField
+- float type: nerver & always, auto=default
+- matInput isRequired?
+- appearance
 
 
 
