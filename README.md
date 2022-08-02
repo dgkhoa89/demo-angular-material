@@ -83,6 +83,23 @@ MatAutocompleteModule
 - Allow set min | max for date
 - Allow filter out certain date: for example weekend
 
+# table
+4 parts:
+    - datasource
+        + interface
+        + array of interface object
+    - provide data source to data table 
+        dothis in html
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    - define column templates
+        + ngContainer: will not render, but contain matColumnDef
+            <ng-container matColumnDef="demo-position">
+            + inside container allow to define the Header and Cell
+        + matColumnDef has a key, to links to the defined column in component.ts
+            displayedColumns: string[] = ['demo-positions', 'demo-name', 'demo-weight', 'demo-symbol'];
+    - define the rows in data table
+
+
 
 
 

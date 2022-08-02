@@ -1,15 +1,28 @@
-<form>
-    <mat-form-field>
-        <mat-label>Start date</mat-label>
-        <input matInput [matDatepicker]="myStartDatePicker" [min]="minDate" [max]="maxDate">
-        <mat-datepicker-toggle [for]="myStartDatePicker" matSuffix></mat-datepicker-toggle>
-        <mat-datepicker #myStartDatePicker></mat-datepicker>
-    </mat-form-field>
-    <mat-divider></mat-divider>
-    <mat-form-field>
-        <mat-label>End date</mat-label>
-        <input matInput [matDatepicker]="myEndDatePicker" [matDatepickerFilter]="dateFilter">
-        <mat-datepicker-toggle [for]="myEndDatePicker" matSuffix></mat-datepicker-toggle>
-        <mat-datepicker #myEndDatePicker></mat-datepicker>
-    </mat-form-field>
-</form>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="demo-positions">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="demo-name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="demo-weight">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="demo-symbol">
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
