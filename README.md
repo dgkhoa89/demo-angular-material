@@ -65,6 +65,11 @@ linear : meaning need to complete 2 before go to 3
 - matInput isRequired?
 - appearance
 
+# Select
+- included demo two way binding [(value)] = "compoent_var"
+- should have a option with no value
+- matOptGroup
+
 
 
 

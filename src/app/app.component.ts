@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  logChange(index:number | null){
-    console.log(index);
-  }
+  selectedValue!:String;
 }

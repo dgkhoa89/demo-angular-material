@@ -1,20 +1,17 @@
-<mat-form-field floatLabel="never" hideRequiredMarker appearance="fill" color="warn">
-    <mat-label>Name</mat-label>
-    <input matInput required>
-    <mat-hint align="end">Min 5 characters</mat-hint>
+<mat-form-field appearance="fill" hideRequiredMarker>
+    <mat-label>Topic</mat-label>
+    <mat-select [(value)]="selectedValue" multiple>
+        <mat-option>None</mat-option>
+        <mat-optgroup label="Frontend">
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="react">React</mat-option>
+            <mat-option value="vue">Vue</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="Database">
+            <mat-option value="angular">Mongodb</mat-option>
+            <mat-option value="react">Mysql</mat-option>
+        </mat-optgroup>
+    </mat-select>
 </mat-form-field>
-<mat-form-field floatLabel="never" hideRequiredMarker appearance="outline" color="primary">
-    <mat-label>Name</mat-label>
-    <input matInput required>
-    <mat-hint align="end">Min 5 characters</mat-hint>
-</mat-form-field>
-<mat-form-field floatLabel="never" hideRequiredMarker appearance="legacy">
-    <mat-label>Name</mat-label>
-    <input matInput required>
-    <mat-hint align="end">Min 5 characters</mat-hint>
-</mat-form-field>
-<mat-form-field floatLabel="never" hideRequiredMarker appearance="standard">
-    <mat-label>Name</mat-label>
-    <input matInput required>
-    <mat-hint align="end">Min 5 characters</mat-hint>
-</mat-form-field> 
+
+<h3>selected: {{selectedValue}}</h3>
