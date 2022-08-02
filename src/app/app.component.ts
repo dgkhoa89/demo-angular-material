@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  selectedValue!:String;
+  options: string[] = ['Angular', 'React', 'Vue'];
+  objectOptions = [
+    { name: 'Angular' },
+    { name: 'React' },
+    { name: 'Vue' },
+    { name: 'Ruby' }
+  ];
 }

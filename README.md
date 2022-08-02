@@ -70,6 +70,13 @@ linear : meaning need to complete 2 before go to 3
 - should have a option with no value
 - matOptGroup
 
+# auto complete
+MatAutocompleteModule
+- create a template variable in html and assign value
+    #auto
+    https://angular.io/guide/template-reference-variables
+- map the variable to input autocomplete value
+    [matAutocomplete]="auto"
 
 
 

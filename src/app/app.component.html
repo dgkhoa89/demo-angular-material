@@ -1,17 +1,21 @@
-<mat-form-field appearance="fill" hideRequiredMarker>
-    <mat-label>Topic</mat-label>
-    <mat-select [(value)]="selectedValue" multiple>
-        <mat-option>None</mat-option>
-        <mat-optgroup label="Frontend">
-            <mat-option value="angular">Angular</mat-option>
-            <mat-option value="react">React</mat-option>
-            <mat-option value="vue">Vue</mat-option>
-        </mat-optgroup>
-        <mat-optgroup label="Database">
-            <mat-option value="angular">Mongodb</mat-option>
-            <mat-option value="react">Mysql</mat-option>
-        </mat-optgroup>
-    </mat-select>
-</mat-form-field>
+<form>
+    <mat-form-field appearance="outline">
+        <input matInput [matAutocomplete]="auto" type="text">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
 
-<h3>selected: {{selectedValue}}</h3>
+    <mat-form-field appearance="fill">
+        <mat-label>From Object</mat-label>
+        <input matInput [matAutocomplete]="autoFromObject" type="text">
+        <mat-autocomplete #autoFromObject="matAutocomplete">
+            <mat-option *ngFor="let option of objectOptions" [value]="option.name">
+                {{option.name}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+
+</form>
