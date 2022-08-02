@@ -1,21 +1,15 @@
 <form>
-    <mat-form-field appearance="outline">
-        <input matInput [matAutocomplete]="auto" type="text">
-        <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of options" [value]="option">
-                {{option}}
-            </mat-option>
-        </mat-autocomplete>
+    <mat-form-field>
+        <mat-label>Start date</mat-label>
+        <input matInput [matDatepicker]="myStartDatePicker" [min]="minDate" [max]="maxDate">
+        <mat-datepicker-toggle [for]="myStartDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myStartDatePicker></mat-datepicker>
     </mat-form-field>
-
-    <mat-form-field appearance="fill">
-        <mat-label>From Object</mat-label>
-        <input matInput [matAutocomplete]="autoFromObject" type="text">
-        <mat-autocomplete #autoFromObject="matAutocomplete">
-            <mat-option *ngFor="let option of objectOptions" [value]="option.name">
-                {{option.name}}
-            </mat-option>
-        </mat-autocomplete>
+    <mat-divider></mat-divider>
+    <mat-form-field>
+        <mat-label>End date</mat-label>
+        <input matInput [matDatepicker]="myEndDatePicker" [matDatepickerFilter]="dateFilter">
+        <mat-datepicker-toggle [for]="myEndDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myEndDatePicker></mat-datepicker>
     </mat-form-field>
-
 </form>

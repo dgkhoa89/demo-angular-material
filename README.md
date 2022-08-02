@@ -78,6 +78,12 @@ MatAutocompleteModule
 - map the variable to input autocomplete value
     [matAutocomplete]="auto"
 
+# data picker
+- combine of input and a data picker popup, and a date picker toggle
+- Allow set min | max for date
+- Allow filter out certain date: for example weekend
+
+
 
 
 

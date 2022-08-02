@@ -8,11 +8,14 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  options: string[] = ['Angular', 'React', 'Vue'];
-  objectOptions = [
-    { name: 'Angular' },
-    { name: 'React' },
-    { name: 'Vue' },
-    { name: 'Ruby' }
-  ];
+  minDate = new Date();
+  maxDate = new Date('2022,8,20');
+
+  dateFilter = (date: Date | null): boolean => {
+    if(date!==null){
+      const day = date.getDay();
+      return day!==0 && day!==6;
+    };
+    return false;
+  }
 }
