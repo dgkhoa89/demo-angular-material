@@ -113,6 +113,12 @@ MatAutocompleteModule
     - need to cast $event to type any by $any(___)
     <input (keyup)="applyFilter($any($event).target.value)" matInput placeholder="Filter">
 
+# sorting
+steps 
+    - import module
+    - add matSort directive in matTable
+    - add directive matSortHeader into header
+    - provide matSort directive to data source ( in the component ts)
 
 
 
