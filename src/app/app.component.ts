@@ -26,6 +26,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class AppComponent {
-  displayedColumns: string[] = ['demo-positions', 'demo-name', 'demo-weight', 'demo-symbol'];
+  displayedColumns: string[] = ['demo-positions', 'demo-name',  'demo-symbol','demo-weight'];
   dataSource = ELEMENT_DATA;
+
+  logData(data:any){
+      console.log(data)
+  }
 }

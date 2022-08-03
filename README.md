@@ -99,7 +99,10 @@ MatAutocompleteModule
             displayedColumns: string[] = ['demo-positions', 'demo-name', 'demo-weight', 'demo-symbol'];
     - define the rows in data table
 
-
+# exploring data table
+    - Define number of column 
+    - maintain the order
+    displayedColumns: string[] = ['demo-positions', 'demo-name', 'demo-weight', 'demo-symbol']; 
 
 
 
