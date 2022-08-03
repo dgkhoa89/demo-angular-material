@@ -44,13 +44,11 @@ const material = [
   MatAutocompleteModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatTableModule
+  MatTableModule,
 ]
 
 @NgModule({
   imports: [material],
-  exports: [
-    material
-  ]
+  exports: [material]
 })
 export class MaterialModule { }

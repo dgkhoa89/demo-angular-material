@@ -104,6 +104,16 @@ MatAutocompleteModule
     - maintain the order
     displayedColumns: string[] = ['demo-positions', 'demo-name', 'demo-weight', 'demo-symbol']; 
 
+# Filtering - sorting - pagination
+- Filtering : achieve in 3 steps
+    1- import matTableDataSource
+    2- create property of MatTableDataSource
+
+- Event binding when input change
+    - need to cast $event to type any by $any(___)
+    <input (keyup)="applyFilter($any($event).target.value)" matInput placeholder="Filter">
+
+
 
 
 
